@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="horizontal"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:id="@+id/main"
+              android:background="@drawable/border"
+              android:weightSum="2"
+              android:gravity="bottom"
+        >
+    <LinearLayout
+            android:id="@+id/top"
+            android:orientation="horizontal"
+            android:layout_width="fill_parent" android:layout_height="wrap_content"
+                  android:layout_alignParentTop="true">
+        <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:text="Lives: 3"
+                android:id="@+id/life"
+                android:layout_weight="1"
+                android:layout_alignParentLeft="true"/>
+        <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:text="Score: 0"
+                android:id="@+id/score"
+                android:layout_weight="1"
+                android:layout_alignParentRight="true"/>
+    </LinearLayout>
+    <LinearLayout
+            android:id="@+id/middle"
+            android:layout_width="fill_parent" android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@id/top"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true">
+
+    </LinearLayout>
+
+    <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+                  android:layout_alignParentBottom="true">
+    <Button
+            android:id="@+id/mybtn"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="Left"
+            android:layout_weight="1"
+
+            />
+    <Button
+            android:id="@+id/rightbtn"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="Right"
+            android:layout_weight="1"
+            />
+    </LinearLayout>
+
+</RelativeLayout>
+

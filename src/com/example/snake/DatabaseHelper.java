@@ -1,4 +1,4 @@
-package com.example.graphics;
+package com.example.snake;
 
 import android.app.Activity;
 import android.content.Context;

@@ -24,7 +24,7 @@ import java.util.ArrayList;
 import java.util.Timer;
 import java.util.TimerTask;
 
-public class AnimationTest3 extends Activity {
+public class SnakeAnimation extends Activity {
 
     protected static final int GUIUPDATEID = 0x1FF;
     AnimRunnable animRunnable;
@@ -39,7 +39,7 @@ public class AnimationTest3 extends Activity {
     Handler myGUIUpdateHandler = new Handler() {
         public void handleMessage(Message msg) {
             switch (msg.what) {
-                case AnimationTest3.GUIUPDATEID:
+                case SnakeAnimation.GUIUPDATEID:
                     myGraphicsView.invalidate();
                     break;
             }
@@ -90,16 +90,16 @@ public class AnimationTest3 extends Activity {
     }
 
     private static class AnimRunnable implements Runnable {
-        AnimationTest3 myAnimation;
+        SnakeAnimation myAnimation;
 
-        public AnimRunnable(AnimationTest3 myAnim) {
+        public AnimRunnable(SnakeAnimation myAnim) {
             myAnimation = myAnim;
         }
 
         public void run() {
             while (!Thread.currentThread().isInterrupted()) {
                 Message message = new Message();
-                message.what = AnimationTest3.GUIUPDATEID;
+                message.what = SnakeAnimation.GUIUPDATEID;
                 myAnimation.myGUIUpdateHandler.sendMessage(message);
 
                 try {
@@ -215,19 +215,19 @@ public class AnimationTest3 extends Activity {
             if (ovalX >= 620 && ovalX <= 640 && ovalY >= 300 && ovalY <= 320) {
                 Log.d("Reached the other side", "Yay");
                 this.clearCanvas();
-                AnimationTest3.this.incrementScore();
+                SnakeAnimation.this.incrementScore();
             }
 
             if(ifIntersectedWithObstacles() || ifIntersectedWithBoundary() ){
 
-                AnimationTest3.this.updateGame();
+                SnakeAnimation.this.updateGame();
             }
 
             paint.setStyle(Paint.Style.FILL);
             paint.setColor(Color.WHITE);
             paint.setStrokeWidth(20);
 
-            if(AnimationTest3.this.level == 1){
+            if(SnakeAnimation.this.level == 1){
                 canvas.drawLine(400, 110, 400, 490, paint);
                 canvas.drawLine(300, 110, 400, 110, paint);
                 canvas.drawLine(300, 490, 400, 490, paint);
@@ -239,7 +239,7 @@ public class AnimationTest3 extends Activity {
                 obstacles.add(o3);
                 obstacles.add(o4);
             }
-            if(AnimationTest3.this.level == 2){
+            if(SnakeAnimation.this.level == 2){
                     canvas.drawLine(100, 110, 100, 490, paint);
                     canvas.drawLine(100, 300, 460, 300, paint);
                     canvas.drawLine(460, 150, 460, 380, paint);
@@ -249,7 +249,7 @@ public class AnimationTest3 extends Activity {
                 obstacles.add(o6);
                 obstacles.add(o7);
             }
-            if(AnimationTest3.this.level == 3){
+            if(SnakeAnimation.this.level == 3){
                 canvas.drawLine(100, 110, 300, 110, paint);
                 canvas.drawLine(300, 110, 300, 490, paint);
                 canvas.drawLine(300, 490, 469, 490, paint);
@@ -378,8 +378,8 @@ public class AnimationTest3 extends Activity {
                     t.cancel();
                 }
             }, 3000);
-            Intent myIntent = new Intent(AnimationTest3.this, Main.class);
-            AnimationTest3.this.startActivity(myIntent);
+            Intent myIntent = new Intent(SnakeAnimation.this, DatabaseHelper.class);
+            SnakeAnimation.this.startActivity(myIntent);
             db = openOrCreateDatabase("StudentDB", Context.MODE_PRIVATE, null);
             db.execSQL("INSERT INTO HIGH_SCORE VALUES ("+ score+ ")");
 

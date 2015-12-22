@@ -6,7 +6,7 @@ This is a basic snake game with three levels. Each level has different obstacles
 ### Screenshot:
 
 Home page:
-
+![Home Page/ Main Screen View](https://cloud.githubusercontent.com/assets/1961478/11948841/73002a5a-a82d-11e5-9722-c58c281a1236.png) 
 
 
 

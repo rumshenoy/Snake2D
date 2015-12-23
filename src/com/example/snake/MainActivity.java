@@ -15,7 +15,7 @@ import com.example.graphics.R;
 /**
  * Created by ramyashenoy on 11/16/14.
  */
-public class DatabaseHelper extends Activity {
+public class MainActivity extends Activity {
     private SQLiteDatabase db;
 
     @Override
@@ -26,14 +26,23 @@ public class DatabaseHelper extends Activity {
         checkScore();
         Button start = (Button) findViewById(R.id.start);
 
+        Button alternate = (Button) findViewById(R.id.alternate);
+
+        alternate.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View view) {
+                Intent alternateIntent = new Intent(MainActivity.this, SnakeAlternateActivity.class);
+                MainActivity.this.startActivity(alternateIntent);
+            }
+        });
 
 
         start.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent myIntent = new Intent(DatabaseHelper.this, SnakeAnimation.class);
-                //myIntent.putExtra("key", value); //Optional parameters
-                DatabaseHelper.this.startActivity(myIntent);
+                Intent snakeIntent = new Intent(MainActivity.this, SnakeAnimation.class);
+                MainActivity.this.startActivity(snakeIntent);
             }
         });
 

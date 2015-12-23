@@ -379,7 +379,7 @@ public class SnakeAnimation extends Activity {
                     t.cancel();
                 }
             }, 3000);
-            Intent myIntent = new Intent(SnakeAnimation.this, DatabaseHelper.class);
+            Intent myIntent = new Intent(SnakeAnimation.this, MainActivity.class);
             SnakeAnimation.this.startActivity(myIntent);
             db = openOrCreateDatabase("StudentDB", Context.MODE_PRIVATE, null);
             db.execSQL("INSERT INTO HIGH_SCORE VALUES ("+ score+ ")");

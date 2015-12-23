@@ -8,7 +8,7 @@
         <activity android:name="com.example.snake.SnakeAnimation"
                   android:label="@string/app_name">
         </activity>
-        <activity android:name="com.example.snake.DatabaseHelper"><intent-filter><action android:name="android.intent.action.MAIN"/>
+        <activity android:name="com.example.snake.MainActivity"><intent-filter><action android:name="android.intent.action.MAIN"/>
             <category android:name="android.intent.category.LAUNCHER"/></intent-filter>
         </activity>
     </application>

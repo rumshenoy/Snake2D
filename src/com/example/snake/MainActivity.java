@@ -21,21 +21,10 @@ public class MainActivity extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.start);
+        setContentView(R.layout.main_activity);
 
         checkScore();
-        Button start = (Button) findViewById(R.id.start);
-
-        Button alternate = (Button) findViewById(R.id.alternate);
-
-        alternate.setOnClickListener(new View.OnClickListener(){
-
-            @Override
-            public void onClick(View view) {
-                Intent alternateIntent = new Intent(MainActivity.this, SnakeAlternateActivity.class);
-                MainActivity.this.startActivity(alternateIntent);
-            }
-        });
+        Button start = (Button) findViewById(R.id.startSnake);
 
 
         start.setOnClickListener(new View.OnClickListener() {
@@ -46,6 +35,16 @@ public class MainActivity extends Activity {
             }
         });
 
+        Button alternate = (Button) findViewById(R.id.startAlternate);
+
+
+        alternate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent alternateIntent = new Intent(MainActivity.this, SnakeAlternateActivity.class);
+                MainActivity.this.startActivity(alternateIntent);
+            }
+        });
     }
 
     private void checkScore() {

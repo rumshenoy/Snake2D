@@ -55,13 +55,13 @@ public class SnakeAnimation extends Activity {
         score = 0;
         life = 3;
         level = 1;
-        setContentView(R.layout.main);
+        setContentView(R.layout.snake_animation);
         LinearLayout ll = (LinearLayout) findViewById(R.id.middle);
         myGraphicsView = new GraphicsTestView(this);
         ll.addView(myGraphicsView);
 
 
-        Button btn = (Button) findViewById(R.id.mybtn);
+        Button btn = (Button) findViewById(R.id.startSnakeGame);
         btn.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {

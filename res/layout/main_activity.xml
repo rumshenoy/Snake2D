@@ -43,7 +43,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Start Game"
-            android:id="@+id/start"
+            android:id="@+id/startSnake"
             android:layout_gravity="center_horizontal"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
@@ -54,21 +54,19 @@
             android:background="@drawable/button"
     android:layout_alignParentBottom="true"/>
 
-
     <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Alternate Activity"
-            android:id="@+id/alternate"
+            android:text="Alternate Game"
+            android:id="@+id/startAlternate"
             android:layout_gravity="center_horizontal"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
             android:paddingRight="10dp"
             android:paddingLeft="10dp"
-            android:layout_marginTop = "20dp"
+            android:layout_marginTop = "10dp"
             android:layout_marginBottom= "20dp"
             android:background="@drawable/button"
             android:layout_alignParentBottom="true"/>
-
 
 </LinearLayout>

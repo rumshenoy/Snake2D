@@ -36,6 +36,8 @@
             android:layout_centerHorizontal="true"
             android:layout_alignParentBottom="true">
 
+
+
     </LinearLayout>
 
     <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
@@ -55,6 +57,8 @@
             android:text="Right"
             android:layout_weight="1"
             />
+
+
     </LinearLayout>
 
 </RelativeLayout>

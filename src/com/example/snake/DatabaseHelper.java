@@ -10,6 +10,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import com.example.graphics.R;
 
 /**
  * Created by ramyashenoy on 11/16/14.

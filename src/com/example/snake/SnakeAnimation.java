@@ -19,6 +19,7 @@ import static android.view.ViewGroup.*;
 
 import android.database.sqlite.*;
 import android.widget.TextView;
+import com.example.graphics.R;
 
 import java.util.ArrayList;
 import java.util.Timer;

@@ -14,9 +14,7 @@
                android:layout_marginTop = "50dp"
 
     />
-
-
-    <TextView
+ <TextView
             android:layout_height="wrap_content"
             android:layout_width="fill_parent"
             android:text="Snake Game"
@@ -55,4 +53,22 @@
             android:layout_marginBottom= "50dp"
             android:background="@drawable/button"
     android:layout_alignParentBottom="true"/>
+
+
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Alternate Activity"
+            android:id="@+id/alternate"
+            android:layout_gravity="center_horizontal"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:paddingRight="10dp"
+            android:paddingLeft="10dp"
+            android:layout_marginTop = "20dp"
+            android:layout_marginBottom= "20dp"
+            android:background="@drawable/button"
+            android:layout_alignParentBottom="true"/>
+
+
 </LinearLayout>

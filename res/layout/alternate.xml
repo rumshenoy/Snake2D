@@ -3,12 +3,22 @@
               android:orientation="vertical"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
-              android:layout_marginBottom="50dp">
+              android:layout_marginBottom="50dp"
+                android:id="@+id/mframe">
     <LinearLayout
             android:id="@+id/top"
             android:orientation="horizontal"
             android:layout_width="fill_parent" android:layout_height="wrap_content"
             android:layout_alignParentTop="true">
+        <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:text="Level: 0"
+                android:id="@+id/level"
+                android:layout_weight="1"
+                android:layout_alignParentRight="true"
+                android:gravity="center"
+                android:background="#528B8B"/>
         <TextView
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
@@ -27,20 +37,21 @@
                 android:layout_alignParentRight="true"
                 android:gravity="center"
                 android:background="#528B8B"/>
+
     </LinearLayout>
 
     <LinearLayout
 
+            android:id="@+id/background"
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/border"
             android:layout_marginBottom="50dp"
             android:layout_alignParentBottom="true"
             android:layout_marginTop="20dp"
+
         >
     />
-
 
     </LinearLayout>
 

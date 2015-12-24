@@ -12,6 +12,7 @@
             <solid android:color="#000000" />
         </shape>
     </item>
+
     <item android:top="350px" android:bottom="350px">
         <shape android:top="10px" android:bottom="10px">
             <solid android:color="#000000" />
